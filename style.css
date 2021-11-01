@@ -1,0 +1,137 @@
+body {
+    box-sizing: border-box;
+    background: hsla(208, 97%, 87%, 1);
+    background: linear-gradient(135deg, hsla(208, 97%, 87%, 1) 4%, hsla(209, 100%, 82%, 1) 31%, hsla(278, 35%, 78%, 1) 100%);
+    color: #073B4C;
+    font-family: 'Quicksand', sans-serif;
+}
+
+.container {
+    display: flex;
+}
+
+#main {
+    background: #FFC8DD;
+    box-shadow: 0 8px 32px 0 rgba( 31, 38, 135, 0.37 );
+    border-radius: 10px;
+    border: 1px solid rgba( 255, 255, 255, 0.18 );
+    width: 45%;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    margin-right: -50%;
+    transform: translate(-50%, -50%)
+}
+
+.card-content {
+    padding: 0;
+    margin: auto;
+}
+
+.card-content h1 {
+    text-align: center;
+    font-family: 'Oleo Script', cursive;
+    letter-spacing: 0.02em;
+    color: #47A6FF;
+}
+
+.add-task {
+    padding: 2vw;
+}
+
+.card-action {
+    align-content: left;
+    padding-left: 2vw;
+    padding-right: 2vw;
+}
+
+.card-action h3 {
+    font-family: 'Oleo Script', cursive;
+    color: #47A6FF;
+    letter-spacing: .05em;
+}
+
+input {
+    border: none;
+    background-color: #FAE8EB;
+    border-bottom: 1px solid lightgray;
+    border-radius: 2px;
+    padding: .3em .5em;
+    width: 97%;
+    font-family: 'Quicksand', sans-serif;
+}
+
+ul {
+    list-style-type: none;
+    text-align: left;
+    position: relative;
+    padding-left: 0;
+}
+
+li {
+    color: #004A8F;
+    padding: .3em 0 .2em .7em;
+    margin: .3em 0;
+    border-radius: 15px;
+    font-size: .8em;
+}
+
+li:nth-child(even) {
+    background-color: rgba(255, 255, 255, 0.5);
+}
+li:nth-child(even):hover {
+    background-color: #F15BB5;
+    transition: background-color .5s;
+    color: #fff;
+    font-weight: bolder;
+}
+li:nth-child(odd) {
+    background-color: rgba(255, 255, 255, 0.8);
+}
+li:nth-child(odd):hover {
+    background-color: #F15BB5;
+    transition: background-color .5s;
+    color: #fff;
+    font-weight: bolder;
+}
+
+.delete-item {
+    position: absolute;
+    right: 0;
+    padding-right: 10px;
+    margin: 0 auto;
+}
+
+a.btn {
+    text-decoration: none;
+    background-color: #47A6FF;
+    padding: 3px 9px 5px 9px;
+    border-radius: 12px;
+    margin-bottom: 30px;
+    color: #fff;
+    font-size: .8em;
+    font-weight: bolder;
+}
+
+a.btn:hover {
+    background-color: #F15BB5;
+    color: #fff;
+}
+
+a:hover {
+    cursor: pointer;
+    font-weight: bolder;
+    color: #073B4C;
+}
+
+img {
+    height: 12px;
+}
+
+a .clear-tasks {
+    margin-bottom: 10vh;
+}
+
+.clear-btn {
+    padding: 1em 0;
+}
