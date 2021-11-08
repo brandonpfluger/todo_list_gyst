@@ -66,8 +66,8 @@ input#task, #filter {
     font-family: 'Quicksand', sans-serif;
 }
 
-input.complete-item {
-    margin-right: 10px;
+li input[type="checkbox"] {
+    margin-right: 12px;
 }
 
 ul {
@@ -78,7 +78,7 @@ ul {
 }
 
 li {
-    color: #004A8F;
+    color: #583B68;
     padding: .3em 0 .2em .7em;
     margin: .3em 0;
     border-radius: 15px;
