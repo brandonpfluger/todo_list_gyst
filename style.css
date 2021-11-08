@@ -1,3 +1,8 @@
+/* * {
+    border: 1px solid red;
+}
+*/
+
 body {
     box-sizing: border-box;
     background: hsla(208, 97%, 87%, 1);
@@ -51,7 +56,7 @@ body {
     letter-spacing: .05em;
 }
 
-input {
+input#task, #filter {
     border: none;
     background-color: #FAE8EB;
     border-bottom: 1px solid lightgray;
@@ -59,6 +64,10 @@ input {
     padding: .3em .5em;
     width: 97%;
     font-family: 'Quicksand', sans-serif;
+}
+
+input.complete-item {
+    margin-right: 10px;
 }
 
 ul {
@@ -95,11 +104,17 @@ li:nth-child(odd):hover {
     font-weight: bolder;
 }
 
+li.complete {
+    color: #CDB4DB;
+    font-style: italic;
+    text-decoration: line-through;
+}
+
 .delete-item {
     position: absolute;
     right: 0;
     padding-right: 10px;
-    margin: 0 auto;
+    margin: 3px auto;
 }
 
 a.btn {
