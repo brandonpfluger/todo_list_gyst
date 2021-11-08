@@ -110,6 +110,14 @@ li.complete {
     text-decoration: line-through;
 }
 
+li input[type="text"] {
+    border: none;
+    background-color: #FAE8EB;
+    border-radius: 2px;
+    padding: .3em .5em;
+    font-family: 'Quicksand', sans-serif;
+}
+
 .delete-item {
     position: absolute;
     right: 0;
