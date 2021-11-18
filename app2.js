@@ -14,7 +14,7 @@ loadEventListeners();
 function loadEventListeners() {
     form.addEventListener('submit', addTask);
     clearBtn.addEventListener('click', clearTasks);
-    filter.addEventListener('keyup', filterTasks);
+    filter.addEventListener('keyup', updateView);
 }
 
 let tasks;
@@ -46,7 +46,7 @@ function addTask(e) {
 
 function updateView() {
     taskList.innerHTML = "";
-    const newList = tasks.forEach((task, index) => {
+    filterTasks().forEach((task, index) => {
         const li = document.createElement('li');
         li.addEventListener('dblclick', ()=>toggleEditingMode(task.id))
         li.className = 'collection-item';
@@ -135,15 +135,12 @@ function clearTasks() {
 
 // Filter Tasks
 function filterTasks(e) {
-    const text = e.target.value.toLowerCase();
-    
-    document.querySelectorAll('.collection-item').forEach(function(task){
-        const item = task.firstChild.textContent;
-        if(item.toLowerCase().indexOf(text) != -1) {
-            task.style.display = 'block';
-        } else {
-            task.style.display = 'none';
-        }
+    const text = filter.value.toLowerCase();
+    if (text === '') {
+        return tasks;
+    }
+    return tasks.filter(function(task){
+      return task.text.toLowerCase().indexOf(text) != -1
     });
 }
 updateView();
